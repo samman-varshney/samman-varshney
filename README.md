@@ -59,9 +59,9 @@
 
 <div align="center">
 
-| 📊 Stats | 🔥 Streak | 💻 Languages |
-|:---:|:---:|:---:|
-| ![Samman's GitHub stats](https://github-readme-stats.vercel.app/api?username=samman-varshney&show_icons=true&count_private=true&theme=radical&hide_border=false) | ![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=samman-varshney&theme=radical&hide_border=false) | ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=samman-varshney&layout=compact&theme=radical&hide_border=false) |
+| 📊 Stats | 💻 Languages |
+|:---:|:---:|
+| ![Samman's GitHub stats](https://github-readme-stats.vercel.app/api?username=samman-varshney&show_icons=true&count_private=true&theme=radical&hide_border=false) | ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=samman-varshney&layout=compact&theme=radical&hide_border=false) |
 
 </div>
 
