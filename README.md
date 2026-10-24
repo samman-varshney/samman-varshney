@@ -126,17 +126,11 @@ Building since 2022 | Status: always learning
 </h2>
 
 <p align="center">
-  <code>
-    <a href="https://github.com/samman-varshney">github</a>
-    &nbsp;·&nbsp;
-    <a href="https://linkedin.com/in/samman-varshney-485834284/">linkedin</a>
-    &nbsp;·&nbsp;
-    <a href="mailto:sammanvarshney345@gmail.com">email</a>
-    &nbsp;·&nbsp;
-    <a href="https://sammanvarshney.vercel.app">portfolio</a>
-  </code>
+  <a href="https://github.com/samman-varshney">github</a>&nbsp;·&nbsp;
+  <a href="https://linkedin.com/in/samman-varshney-485834284/">linkedin</a>&nbsp;·&nbsp;
+  <a href="mailto:sammanvarshney345@gmail.com">email</a>&nbsp;·&nbsp;
+  <a href="https://sammanvarshney.vercel.app">portfolio</a>
 </p>
-
 <br/>
 
 <p align="center">
