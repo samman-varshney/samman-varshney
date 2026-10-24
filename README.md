@@ -124,13 +124,24 @@ Building since 2022 | Status: always learning
 <h2 align="center">
   <code>〔 SIGNAL 〕</code>
 </h2>
-
 <p align="center">
-  <a href="https://github.com/samman-varshney">github</a>&nbsp;·&nbsp;
-  <a href="https://linkedin.com/in/samman-varshney-485834284/">linkedin</a>&nbsp;·&nbsp;
-  <a href="mailto:sammanvarshney345@gmail.com">email</a>&nbsp;·&nbsp;
-  <a href="https://sammanvarshney.vercel.app">portfolio</a>
+  <a href="https://linkedin.com/in/samman-varshney-485834284/">
+    <img src="./assets/linkedin_logo.svg" alt="LinkedIn"/>
+  </a>
+  &nbsp;
+  <a href="https://sammanvarshney.vercel.app">
+    <img src="https://img.shields.io/static/v1?label=&message=portfolio&color=0B0D10&labelColor=0B0D10&logo=vercel&logoColor=C8FF5D&style=flat-square" alt="Portfolio"/>
+  </a>
+  &nbsp;
+  <a href="https://leetcode.com/samman_varshney/">
+    <img src="https://img.shields.io/static/v1?label=&message=leetcode&color=0B0D10&labelColor=0B0D10&logo=leetcode&logoColor=C8FF5D&style=flat-square" alt="LeetCode"/>
+  </a>
+  &nbsp;
+  <a href="https://codeforces.com/profile/samamn_varshney">
+    <img src="https://img.shields.io/static/v1?label=&message=codeforces&color=0B0D10&labelColor=0B0D10&logo=codeforces&logoColor=C8FF5D&style=flat-square" alt="Codeforces"/>
+  </a>
 </p>
+
 <br/>
 
 <p align="center">
