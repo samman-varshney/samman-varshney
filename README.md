@@ -126,7 +126,7 @@ Building since 2022 | Status: always learning
 </h2>
 <p align="center">
   <a href="https://linkedin.com/in/samman-varshney-485834284/">
-    <img src="./assets/linkedin_logo.svg" alt="LinkedIn"/>
+    <img src="./linkedin_logo.svg" alt="LinkedIn"/>
   </a>
   &nbsp;
   <a href="https://sammanvarshney.vercel.app">
