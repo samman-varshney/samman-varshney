@@ -1,106 +1,146 @@
-<!-- Profile Header -->
-<h1 align="center">
-  Hey there 👋, I'm <span style="color:#ff0054;">Samman Varshney</span>
-</h1>
-
-<h3 align="center">🚀 Full Stack Developer | DSA Learner | Tech Explorer</h3>
+<!-- ╔══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║  TERMINAL: LIVING SYSTEM — GitHub Profile README               ║ -->
+<!-- ║  Samman Varshney                                               ║ -->
+<!-- ╚══════════════════════════════════════════════════════════════════╝ -->
 
 <p align="center">
-  <a href="mailto:sammanvarshney345@gmail.com">
-    <img src="https://img.shields.io/badge/Email-sammanvarshney345%40gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
-  </a>
-  <a href="https://www.linkedin.com/in/samman-varshney-485834284/">
-    <img src="https://img.shields.io/badge/LinkedIn-Samman%20Varshney-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
-  </a>
+  <img src="./hero-animation.svg" alt="Samman Varshney — Artist / Engineer" width="800" />
 </p>
 
----
+<!-- Static fallback: replace hero-animation.svg with hero.svg if animations don't render -->
 
-## 💫 About Me
+<br/>
 
-- 💻 Passionate **Full Stack Developer** who loves solving real-world problems  
-- 🌱 Currently sharpening **Data Structures & Algorithms**  
-- 🔭 Building an AI-powered project planning tool to simplify developer workflows  
-- 🎮 Gamer & cricket lover who believes in *productive breaks*  
-- 💬 Ask me about **JavaScript, React, Node.js, or MongoDB**
-
----
-
-## 🧠 Tech Stack
-
-<div align="center">
-
-### ⚡ Frontend
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-
-### 🧩 Backend & Databases
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?style=for-the-badge&logo=prisma&logoColor=white)
-
-### 🛠 Tools & Others
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-
-</div>
-
----
-
-## 📈 GitHub Analytics
-
-<div align="center">
-
-| 📊 Stats | 💻 Languages |
-|:---:|:---:|
-| ![Samman's GitHub stats](https://github-readme-stats.vercel.app/api?username=samman-varshney&show_icons=true&count_private=true&theme=radical&hide_border=false) | ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=samman-varshney&layout=compact&theme=radical&hide_border=false) |
-
-</div>
-
----
-
-## 🏆 Achievements & Trophies
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=samman-varshney&theme=radical&no-bg=true&no-frame=false&column=4&margin-w=15&margin-h=15" alt="GitHub Trophies"/>
-</div>
-
----
-
-## 🚧 Current Projects
-
-- 🧠 **AI Project Flow Visualizer** – Auto-generates project flowcharts and suggests tech stacks  
-- 📦 **DevTrack** – Collaboration & deployment tool for developers  
-- 🗂️ **Portfolio Revamp** – Building a minimal, animated portfolio with Next.js + Framer Motion  
-
----
-
-## 🎯 2025 Goals
-
-- 📚 Strengthen **DSA** and solve 500+ LeetCode problems  
-- 💼 Land an internship or SDE-1 role at a top tech firm (like PayPal or similar)  
-- 🧩 Contribute to **open source** projects  
-- 🚀 Launch my AI project tool publicly  
-
----
-
-## ✨ Quote I Live By
-<div align="center">
-  <i>“Code is like humor — when you have to explain it, it’s bad.”</i>
-</div>
-
----
-
-## 👀 Visitors Count
+<!-- ─────────────────────── TERMINAL INTRODUCTION ─────────────────────── -->
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=samman-varshney&label=Profile%20views&color=ff0054&style=flat" alt="Profile Views"/>
+
+```
+$ whoami
+Samman Varshney — CS Engineering Student
+
+$ cat interests.txt
+software engineering
+competitive programming
+generative AI
+developer tools
+
+$ cat philosophy.txt
+understand → decompose → model → build → test → refine
+
+"I start by understanding the problem and its constraints,
+ work toward an approach I can explain, test it against
+ edge cases, and refine the implementation until it is
+ both correct and maintainable."
+
+$ uptime
+Building since 2022 | Status: always learning
+```
+
 </p>
+
+<br/>
+
+<!-- ─────────────────────── SYSTEM ARCHITECTURE ─────────────────────── -->
+
+<h2 align="center">
+  <code>〔 SYSTEM ARCHITECTURE 〕</code>
+</h2>
+
+<p align="center">
+  <img src="./system-map.svg" alt="System Architecture Map — Problem to Useful Software through Algorithms, Systems, and AI" width="800" />
+</p>
+
+<br/>
+
+<!-- ─────────────────────── ACTIVE PROCESSES ─────────────────────── -->
+
+<h2 align="center">
+  <code>〔 ACTIVE PROCESSES 〕</code>
+</h2>
+
+<p align="center">
+  <img src="./projects.svg" alt="Active Projects — DoraCode, CodeFlow, Blogzilla" width="800" />
+</p>
+
+<details>
+<summary><code>› expand process details</code></summary>
+<br/>
+
+| Process       | Description                                                                        | Stack                                                        |
+| ------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
+| **DoraCode**  | Collaborative code review with PR sessions, team roles, and GitHub API integration | React · Node.js · GitHub API                                 |
+| **CodeFlow**  | AI-assisted requirement clarification and flowchart generation                     | React Flow · Mermaid.js · Dagre · Gemini API                 |
+| **Blogzilla** | Full-stack publishing platform being modernized                                    | React · TypeScript · Node.js · Express · PostgreSQL · Prisma |
+
+</details>
+
+<br/>
+
+<!-- ─────────────────────── TELEMETRY ─────────────────────── -->
+
+<h2 align="center">
+  <code>〔 TELEMETRY 〕</code>
+</h2>
+
+<p align="center">
+  <img src="./achievements.svg" alt="DSA Achievements — 1000+ Problems, 1868 LeetCode Rating, 1313 Codeforces Rating" width="800" />
+</p>
+
+<br/>
+
+<!-- ─────────────────────── SKILL MATRIX ─────────────────────── -->
+
+<h2 align="center">
+  <code>〔 SKILL MATRIX 〕</code>
+</h2>
+
+<p align="center">
+
+```
+┌────────────────────────────────────────────────────────────────────┐
+│                                                                    │
+│  LANGUAGES     Java · Python · JavaScript · TypeScript · SQL       │
+│                                                                    │
+│  FRONTEND      React · Redux · Redux Saga · Tailwind CSS           │
+│                React Flow                                          │
+│                                                                    │
+│  BACKEND       Node.js · Express                                   │
+│                                                                    │
+│  DATA          PostgreSQL · MongoDB · Prisma · Redis               │
+│                                                                    │
+│  GEN AI        LLM APIs · Embeddings · RAG · Vector Search         │
+│                Tool Calling · Tokenization & Attention             │
+│                                                                    │
+└────────────────────────────────────────────────────────────────────┘
+```
+
+</p>
+
+<br/>
+
+<!-- ─────────────────────── SIGNAL / LINKS ─────────────────────── -->
+
+<h2 align="center">
+  <code>〔 SIGNAL 〕</code>
+</h2>
+
+<p align="center">
+  <code>
+    <a href="https://github.com/samman-varshney">github</a>
+    &nbsp;·&nbsp;
+    <a href="https://linkedin.com/in/samman-varshney-485834284/">linkedin</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:sammanvarshney345@gmail.com">email</a>
+    &nbsp;·&nbsp;
+    <a href="https://sammanvarshney.vercel.app">portfolio</a>
+  </code>
+</p>
+
+<br/>
+
+<p align="center">
+  <code style="color: #8B929E; font-size: 10px;">Think deeply. Build carefully. Refactor relentlessly.</code>
+</p>
+
+<!-- ─────────────────────── EOF ─────────────────────── -->
