@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" aria-label="Samman Varshney - Artist / Engineer animated hero banner">
+  <title>Samman Varshney — Artist / Engineer</title>
+  <style>
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.6; }
+    }
+    @keyframes nodeGlow {
+      0%, 100% { opacity: 0.25; r: 2.5; }
+      50% { opacity: 0.7; r: 3.5; }
+    }
+    @keyframes nodeGlowSmall {
+      0%, 100% { opacity: 0.15; }
+      50% { opacity: 0.5; }
+    }
+    @keyframes statusPulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+    @keyframes lineSlide {
+      0% { stroke-dashoffset: 200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes lineSlideReverse {
+      0% { stroke-dashoffset: -200; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes accentPulse {
+      0%, 100% { opacity: 0.4; }
+      50% { opacity: 0.8; }
+    }
+    @keyframes subtitleGlow {
+      0%, 100% { filter: url(#glowGreen); }
+      50% { filter: url(#glowGreenBright); }
+    }
+    .cursor { animation: blink 1s step-end infinite; }
+    .node-pulse { animation: nodeGlow 3s ease-in-out infinite; }
+    .node-pulse-d1 { animation: nodeGlow 3s ease-in-out 0.5s infinite; }
+    .node-pulse-d2 { animation: nodeGlow 3s ease-in-out 1s infinite; }
+    .node-pulse-d3 { animation: nodeGlow 3s ease-in-out 1.5s infinite; }
+    .dot-pulse { animation: nodeGlowSmall 4s ease-in-out infinite; }
+    .dot-pulse-d1 { animation: nodeGlowSmall 4s ease-in-out 1s infinite; }
+    .dot-pulse-d2 { animation: nodeGlowSmall 4s ease-in-out 2s infinite; }
+    .dot-pulse-d3 { animation: nodeGlowSmall 4s ease-in-out 3s infinite; }
+    .signal-line { stroke-dasharray: 20 180; animation: lineSlide 4s linear infinite; }
+    .signal-line-r { stroke-dasharray: 20 180; animation: lineSlideReverse 5s linear infinite; }
+    .status-pulse { animation: statusPulse 2s ease-in-out infinite; }
+    .accent-pulse { animation: accentPulse 3s ease-in-out infinite; }
+  </style>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0D10"/>
+      <stop offset="50%" stop-color="#0E1117"/>
+      <stop offset="100%" stop-color="#0B0D10"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C8FF5D" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#C8FF5D" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#C8FF5D" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="coralLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FF6B6B" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FF6B6B" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glowGreen">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowGreenBright">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowCoral">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="300" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#C8FF5D" stroke-width="0.5">
+    <line x1="0" y1="50" x2="800" y2="50"/>
+    <line x1="0" y1="100" x2="800" y2="100"/>
+    <line x1="0" y1="150" x2="800" y2="150"/>
+    <line x1="0" y1="200" x2="800" y2="200"/>
+    <line x1="0" y1="250" x2="800" y2="250"/>
+    <line x1="100" y1="0" x2="100" y2="300"/>
+    <line x1="200" y1="0" x2="200" y2="300"/>
+    <line x1="300" y1="0" x2="300" y2="300"/>
+    <line x1="400" y1="0" x2="400" y2="300"/>
+    <line x1="500" y1="0" x2="500" y2="300"/>
+    <line x1="600" y1="0" x2="600" y2="300"/>
+    <line x1="700" y1="0" x2="700" y2="300"/>
+  </g>
+
+  <!-- Animated signal lines - left side -->
+  <g stroke="#C8FF5D" stroke-width="0.8" fill="none">
+    <path class="signal-line" d="M0,45 L60,45 L70,55 L120,55" opacity="0.35"/>
+    <path class="signal-line-r" d="M0,80 L40,80 L50,70 L90,70 L100,80 L140,80" opacity="0.3"/>
+    <path class="signal-line" d="M0,230 L50,230 L60,220 L100,220" opacity="0.3"/>
+    <path class="signal-line-r" d="M0,260 L70,260 L80,250 L110,250 L120,260 L150,260" opacity="0.25"/>
+    <path d="M120,55 L120,70" opacity="0.2"/>
+    <path d="M100,220 L100,235" opacity="0.2"/>
+  </g>
+
+  <!-- Animated circuit nodes - left -->
+  <circle class="node-pulse" cx="120" cy="55" r="2.5" fill="#C8FF5D"/>
+  <circle class="node-pulse-d1" cx="140" cy="80" r="2" fill="#C8FF5D"/>
+  <circle class="node-pulse-d2" cx="60" cy="45" r="1.5" fill="#C8FF5D"/>
+  <circle class="node-pulse-d3" cx="100" cy="220" r="2.5" fill="#C8FF5D"/>
+  <circle class="node-pulse" cx="150" cy="260" r="2" fill="#C8FF5D"/>
+  <circle class="node-pulse-d2" cx="50" cy="230" r="1.5" fill="#C8FF5D"/>
+
+  <!-- Animated signal lines - right side -->
+  <g stroke="#C8FF5D" stroke-width="0.8" fill="none">
+    <path class="signal-line-r" d="M800,60 L740,60 L730,50 L680,50" opacity="0.35"/>
+    <path class="signal-line" d="M800,95 L750,95 L740,85 L710,85 L700,95 L660,95" opacity="0.3"/>
+    <path class="signal-line-r" d="M800,220 L745,220 L735,230 L700,230" opacity="0.3"/>
+    <path class="signal-line" d="M800,250 L730,250 L720,240 L690,240 L680,250 L650,250" opacity="0.25"/>
+    <path d="M680,50 L680,65" opacity="0.2"/>
+    <path d="M700,230 L700,245" opacity="0.2"/>
+  </g>
+
+  <!-- Animated circuit nodes - right -->
+  <circle class="node-pulse-d2" cx="680" cy="50" r="2.5" fill="#C8FF5D"/>
+  <circle class="node-pulse-d3" cx="660" cy="95" r="2" fill="#C8FF5D"/>
+  <circle class="node-pulse" cx="740" cy="60" r="1.5" fill="#C8FF5D"/>
+  <circle class="node-pulse-d1" cx="700" cy="230" r="2.5" fill="#C8FF5D"/>
+  <circle class="node-pulse-d2" cx="650" cy="250" r="2" fill="#C8FF5D"/>
+  <circle class="node-pulse-d3" cx="745" cy="220" r="1.5" fill="#C8FF5D"/>
+
+  <!-- Animated floating process dots -->
+  <circle class="dot-pulse" cx="180" cy="30" r="1" fill="#C8FF5D"/>
+  <circle class="dot-pulse-d1" cx="220" cy="55" r="1.2" fill="#C8FF5D"/>
+  <circle class="dot-pulse-d2" cx="260" cy="25" r="0.8" fill="#C8FF5D"/>
+  <circle class="dot-pulse-d3" cx="540" cy="35" r="1" fill="#C8FF5D"/>
+  <circle class="dot-pulse" cx="590" cy="55" r="1.2" fill="#C8FF5D"/>
+  <circle class="dot-pulse-d1" cx="620" cy="28" r="0.8" fill="#C8FF5D"/>
+  <circle class="dot-pulse-d2" cx="190" cy="270" r="1" fill="#C8FF5D"/>
+  <circle class="dot-pulse-d3" cx="230" cy="280" r="1.2" fill="#C8FF5D"/>
+  <circle class="dot-pulse" cx="570" cy="275" r="1" fill="#C8FF5D"/>
+  <circle class="dot-pulse-d1" cx="610" cy="268" r="0.8" fill="#C8FF5D"/>
+  <!-- Coral dots -->
+  <circle class="dot-pulse-d2" cx="200" cy="42" r="0.8" fill="#FF6B6B"/>
+  <circle class="dot-pulse-d3" cx="600" cy="42" r="0.8" fill="#FF6B6B"/>
+  <circle class="dot-pulse" cx="210" cy="265" r="0.8" fill="#FF6B6B"/>
+  <circle class="dot-pulse-d1" cx="590" cy="280" r="0.8" fill="#FF6B6B"/>
+
+  <!-- Thin connecting lines across middle -->
+  <g stroke="#C8FF5D" stroke-width="0.3" opacity="0.08">
+    <line x1="160" y1="120" x2="250" y2="120"/>
+    <line x1="550" y1="120" x2="640" y2="120"/>
+    <line x1="160" y1="180" x2="250" y2="180"/>
+    <line x1="550" y1="180" x2="640" y2="180"/>
+  </g>
+
+  <!-- Top accent line with animation -->
+  <rect class="accent-pulse" x="200" y="0" width="400" height="1.5" fill="url(#accentLine)"/>
+
+  <!-- Main title: SAMMAN VARSHNEY -->
+  <text x="400" y="105" text-anchor="middle" font-family="'Courier New', 'Lucida Console', monospace" font-size="42" font-weight="bold" fill="#E8E9E6" letter-spacing="8">SAMMAN VARSHNEY</text>
+
+  <!-- Blinking cursor after name -->
+  <rect class="cursor" x="695" y="85" width="3" height="28" fill="#C8FF5D"/>
+
+  <!-- Subtitle: ARTIST / ENGINEER with animated glow -->
+  <text x="400" y="138" text-anchor="middle" font-family="'Courier New', 'Lucida Console', monospace" font-size="16" fill="#C8FF5D" letter-spacing="12" filter="url(#glowGreen)">ARTIST / ENGINEER
+    <animate attributeName="filter" values="url(#glowGreen);url(#glowGreenBright);url(#glowGreen)" dur="4s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Thin separator with pulse -->
+  <rect class="accent-pulse" x="250" y="152" width="300" height="0.5" fill="url(#accentLine)"/>
+
+  <!-- Core statement -->
+  <text x="400" y="178" text-anchor="middle" font-family="'Courier New', 'Lucida Console', monospace" font-size="10.5" fill="#8B929E" letter-spacing="0.5">
+    <tspan x="400" dy="0">I turn complex problems into understandable systems,</tspan>
+    <tspan x="400" dy="16">and ideas into things people can use.</tspan>
+  </text>
+
+  <!-- Status line background -->
+  <rect class="status-pulse" x="170" y="218" width="460" height="26" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="0.5"/>
+
+  <!-- Status line text -->
+  <text x="400" y="235" text-anchor="middle" font-family="'Courier New', 'Lucida Console', monospace" font-size="10" letter-spacing="1">
+    <tspan fill="#C8FF5D">[</tspan>
+    <tspan fill="#8B929E">SYSTEM STATUS: </tspan>
+    <tspan fill="#C8FF5D">CURIOUS</tspan>
+    <tspan fill="#C8FF5D">]</tspan>
+    <tspan fill="#8B929E">  </tspan>
+    <tspan fill="#FF6B6B">[</tspan>
+    <tspan fill="#8B929E">BUILD MODE: </tspan>
+    <tspan fill="#FF6B6B">ACTIVE</tspan>
+    <tspan fill="#FF6B6B">]</tspan>
+  </text>
+
+  <!-- Status indicator dot (animated) -->
+  <circle cx="176" cy="231" r="2.5" fill="#C8FF5D">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Bottom accent line with animation -->
+  <rect class="accent-pulse" x="200" y="298" width="400" height="2" fill="url(#accentLine)"/>
+
+  <!-- Corner markers -->
+  <g stroke="#C8FF5D" stroke-width="1" opacity="0.3">
+    <polyline points="5,20 5,5 20,5" fill="none"/>
+    <polyline points="780,5 795,5 795,20" fill="none"/>
+    <polyline points="5,280 5,295 20,295" fill="none"/>
+    <polyline points="780,295 795,295 795,280" fill="none"/>
+  </g>
+
+  <!-- Border -->
+  <rect x="0" y="0" width="800" height="300" fill="none" stroke="#C8FF5D" stroke-width="0.5" opacity="0.15"/>
+</svg>

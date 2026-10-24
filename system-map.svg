@@ -1,0 +1,229 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" aria-label="System Architecture Map - Developer skill and process architecture">
+  <title>System Architecture Map</title>
+  <style>
+    @keyframes nodeGlow {
+      0%, 100% { opacity: 0.7; }
+      50% { opacity: 1; }
+    }
+    @keyframes lineFlow {
+      0% { stroke-dashoffset: 20; }
+      100% { stroke-dashoffset: 0; }
+    }
+    .main-node { animation: nodeGlow 3s ease-in-out infinite; }
+    .main-node-d1 { animation: nodeGlow 3s ease-in-out 0.5s infinite; }
+    .main-node-d2 { animation: nodeGlow 3s ease-in-out 1s infinite; }
+    .flow-line { stroke-dasharray: 4 4; animation: lineFlow 2s linear infinite; }
+  </style>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0B0D10"/>
+      <stop offset="100%" stop-color="#0E1117"/>
+    </linearGradient>
+    <filter id="glowG">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowC">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.03" stroke="#C8FF5D" stroke-width="0.5">
+    <line x1="0" y1="65" x2="800" y2="65"/>
+    <line x1="0" y1="130" x2="800" y2="130"/>
+    <line x1="0" y1="195" x2="800" y2="195"/>
+    <line x1="0" y1="260" x2="800" y2="260"/>
+    <line x1="0" y1="325" x2="800" y2="325"/>
+    <line x1="0" y1="390" x2="800" y2="390"/>
+    <line x1="0" y1="455" x2="800" y2="455"/>
+    <line x1="100" y1="0" x2="100" y2="520"/>
+    <line x1="200" y1="0" x2="200" y2="520"/>
+    <line x1="300" y1="0" x2="300" y2="520"/>
+    <line x1="400" y1="0" x2="400" y2="520"/>
+    <line x1="500" y1="0" x2="500" y2="520"/>
+    <line x1="600" y1="0" x2="600" y2="520"/>
+    <line x1="700" y1="0" x2="700" y2="520"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="28" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" fill="#8B929E" letter-spacing="6">SYSTEM ARCHITECTURE</text>
+  <line x1="280" y1="36" x2="520" y2="36" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ============= LEVEL 0: PROBLEM ============= -->
+  <rect x="340" y="52" width="120" height="32" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="1.2" filter="url(#glowG)" class="main-node"/>
+  <text x="400" y="73" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" font-weight="bold" fill="#C8FF5D">PROBLEM</text>
+
+  <!-- Arrow: PROBLEM → DECOMPOSITION -->
+  <line x1="400" y1="84" x2="400" y2="112" stroke="#C8FF5D" stroke-width="0.8" opacity="0.5" class="flow-line"/>
+  <polygon points="395,110 400,118 405,110" fill="#C8FF5D" opacity="0.5"/>
+
+  <!-- ============= LEVEL 1: DECOMPOSITION ============= -->
+  <rect x="325" y="118" width="150" height="32" rx="3" fill="#0B0D10" stroke="#E8E9E6" stroke-width="1" class="main-node-d1"/>
+  <text x="400" y="139" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#E8E9E6">DECOMPOSITION</text>
+
+  <!-- Branching lines from DECOMPOSITION -->
+  <line x1="400" y1="150" x2="400" y2="170" stroke="#8B929E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="160" y1="170" x2="640" y2="170" stroke="#8B929E" stroke-width="0.8" opacity="0.4"/>
+  <!-- Down to each branch -->
+  <line x1="160" y1="170" x2="160" y2="188" stroke="#8B929E" stroke-width="0.8" opacity="0.4"/>
+  <polygon points="155,186 160,194 165,186" fill="#8B929E" opacity="0.4"/>
+  <line x1="400" y1="170" x2="400" y2="188" stroke="#8B929E" stroke-width="0.8" opacity="0.4"/>
+  <polygon points="395,186 400,194 405,186" fill="#8B929E" opacity="0.4"/>
+  <line x1="640" y1="170" x2="640" y2="188" stroke="#8B929E" stroke-width="0.8" opacity="0.4"/>
+  <polygon points="635,186 640,194 645,186" fill="#8B929E" opacity="0.4"/>
+
+  <!-- ============= LEVEL 2: THREE PILLARS ============= -->
+
+  <!-- ALGORITHMS -->
+  <rect x="95" y="194" width="130" height="32" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="1" class="main-node"/>
+  <text x="160" y="215" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#C8FF5D">ALGORITHMS</text>
+
+  <!-- SYSTEMS -->
+  <rect x="335" y="194" width="130" height="32" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="1" class="main-node-d1"/>
+  <text x="400" y="215" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#C8FF5D">SYSTEMS</text>
+
+  <!-- AI -->
+  <rect x="575" y="194" width="130" height="32" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="1" class="main-node-d2"/>
+  <text x="640" y="215" text-anchor="middle" font-family="'Courier New', monospace" font-size="11" font-weight="bold" fill="#C8FF5D">AI</text>
+
+  <!-- ============= SUBNODES: ALGORITHMS ============= -->
+  <!-- Lines down from ALGORITHMS -->
+  <line x1="160" y1="226" x2="160" y2="245" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="80" y1="245" x2="240" y2="245" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="80" y1="245" x2="80" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="160" y1="245" x2="160" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="240" y1="245" x2="240" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Subnode: Data Structures -->
+  <rect x="30" y="260" width="100" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="80" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Data Structures</text>
+  <circle cx="35" cy="273" r="2" fill="#C8FF5D" opacity="0.4"/>
+
+  <!-- Subnode: Complexity -->
+  <rect x="110" y="260" width="100" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="160" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Complexity</text>
+  <circle cx="115" cy="273" r="2" fill="#C8FF5D" opacity="0.4"/>
+
+  <!-- Subnode: Competitive Prog -->
+  <rect x="180" y="295" width="120" height="26" rx="2" fill="#0B0D10" stroke="#FF6B6B" stroke-width="0.7"/>
+  <text x="240" y="312" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FF6B6B">Competitive Prog</text>
+  <circle cx="185" cy="308" r="2" fill="#FF6B6B" opacity="0.5"/>
+  <line x1="240" y1="286" x2="240" y2="295" stroke="#8B929E" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ============= SUBNODES: SYSTEMS ============= -->
+  <!-- Lines down from SYSTEMS -->
+  <line x1="400" y1="226" x2="400" y2="245" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="310" y1="245" x2="490" y2="245" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="310" y1="245" x2="310" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="400" y1="245" x2="400" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="490" y1="245" x2="490" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Subnode: Frontend -->
+  <rect x="260" y="260" width="100" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="310" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Frontend</text>
+  <circle cx="265" cy="273" r="2" fill="#C8FF5D" opacity="0.4"/>
+
+  <!-- Frontend sub-items -->
+  <line x1="310" y1="286" x2="310" y2="298" stroke="#8B929E" stroke-width="0.4" opacity="0.3"/>
+  <text x="310" y="310" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#8B929E" opacity="0.7">React · Redux</text>
+  <text x="310" y="322" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#8B929E" opacity="0.7">Tailwind</text>
+
+  <!-- Subnode: Backend -->
+  <rect x="350" y="260" width="100" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="400" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Backend</text>
+  <circle cx="355" cy="273" r="2" fill="#C8FF5D" opacity="0.4"/>
+
+  <!-- Backend sub-items -->
+  <line x1="400" y1="286" x2="400" y2="298" stroke="#8B929E" stroke-width="0.4" opacity="0.3"/>
+  <text x="400" y="310" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#8B929E" opacity="0.7">Node · Express</text>
+
+  <!-- Subnode: Data -->
+  <rect x="440" y="260" width="100" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="490" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Data</text>
+  <circle cx="445" cy="273" r="2" fill="#C8FF5D" opacity="0.4"/>
+
+  <!-- Data sub-items -->
+  <line x1="490" y1="286" x2="490" y2="298" stroke="#8B929E" stroke-width="0.4" opacity="0.3"/>
+  <text x="490" y="310" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#8B929E" opacity="0.7">PostgreSQL · MongoDB</text>
+  <text x="490" y="322" text-anchor="middle" font-family="'Courier New', monospace" font-size="7" fill="#8B929E" opacity="0.7">Redis · Prisma</text>
+
+  <!-- ============= SUBNODES: AI ============= -->
+  <!-- Lines down from AI -->
+  <line x1="640" y1="226" x2="640" y2="245" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="570" y1="245" x2="720" y2="245" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="570" y1="245" x2="570" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="640" y1="245" x2="640" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+  <line x1="720" y1="245" x2="720" y2="260" stroke="#C8FF5D" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Subnode: Embeddings -->
+  <rect x="530" y="260" width="80" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="570" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Embeddings</text>
+  <circle cx="535" cy="273" r="2" fill="#C8FF5D" opacity="0.4"/>
+
+  <!-- Subnode: RAG -->
+  <rect x="610" y="260" width="60" height="26" rx="2" fill="#0B0D10" stroke="#FF6B6B" stroke-width="0.7"/>
+  <text x="640" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#FF6B6B">RAG</text>
+  <circle cx="615" cy="273" r="2" fill="#FF6B6B" opacity="0.5"/>
+
+  <!-- Subnode: Vector Search -->
+  <rect x="670" y="260" width="100" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="720" y="277" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Vector Search</text>
+  <circle cx="675" cy="273" r="2" fill="#C8FF5D" opacity="0.4"/>
+
+  <!-- Subnode: Tool Calling -->
+  <rect x="600" y="298" width="90" height="26" rx="2" fill="#0B0D10" stroke="#8B929E" stroke-width="0.7"/>
+  <text x="645" y="315" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Tool Calling</text>
+  <circle cx="605" cy="311" r="2" fill="#C8FF5D" opacity="0.4"/>
+  <line x1="640" y1="286" x2="640" y2="298" stroke="#8B929E" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- ============= CONVERGENCE TO USEFUL SOFTWARE ============= -->
+  <!-- Lines converging down -->
+  <line x1="160" y1="321" x2="160" y2="365" stroke="#8B929E" stroke-width="0.5" opacity="0.3"/>
+  <line x1="400" y1="330" x2="400" y2="365" stroke="#8B929E" stroke-width="0.5" opacity="0.3"/>
+  <line x1="640" y1="324" x2="640" y2="365" stroke="#8B929E" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Convergence horizontal line -->
+  <line x1="160" y1="365" x2="640" y2="365" stroke="#8B929E" stroke-width="0.8" opacity="0.4"/>
+  <line x1="400" y1="365" x2="400" y2="385" stroke="#C8FF5D" stroke-width="0.8" opacity="0.5" class="flow-line"/>
+  <polygon points="395,383 400,391 405,383" fill="#C8FF5D" opacity="0.5"/>
+
+  <!-- ============= LEVEL 3: USEFUL SOFTWARE ============= -->
+  <rect x="310" y="391" width="180" height="36" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="1.5" filter="url(#glowG)" class="main-node"/>
+  <text x="400" y="414" text-anchor="middle" font-family="'Courier New', monospace" font-size="13" font-weight="bold" fill="#C8FF5D">USEFUL SOFTWARE</text>
+
+  <!-- ============= PHILOSOPHY LINE ============= -->
+  <line x1="250" y1="450" x2="550" y2="450" stroke="#C8FF5D" stroke-width="0.5" opacity="0.2"/>
+  <text x="400" y="470" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#8B929E" letter-spacing="2">understand → decompose → model → build → test → refine</text>
+
+  <!-- Tagline -->
+  <text x="400" y="498" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" fill="#C8FF5D" opacity="0.5" letter-spacing="3">Think deeply. Build carefully. Refactor relentlessly.</text>
+
+  <!-- Border -->
+  <rect x="0" y="0" width="800" height="520" fill="none" stroke="#C8FF5D" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Corner markers -->
+  <g stroke="#C8FF5D" stroke-width="0.8" opacity="0.2">
+    <polyline points="4,15 4,4 15,4" fill="none"/>
+    <polyline points="785,4 796,4 796,15" fill="none"/>
+    <polyline points="4,505 4,516 15,516" fill="none"/>
+    <polyline points="785,516 796,516 796,505" fill="none"/>
+  </g>
+</svg>

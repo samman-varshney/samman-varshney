@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" aria-label="DSA Achievements Telemetry Dashboard">
+  <title>Achievements Telemetry</title>
+  <style>
+    @keyframes graphDraw {
+      0% { stroke-dashoffset: 300; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes barFill {
+      0% { width: 0; }
+      100% { width: 100%; }
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.5; }
+      50% { opacity: 1; }
+    }
+    @keyframes counterGlow {
+      0%, 100% { filter: none; }
+      50% { filter: url(#numGlow); }
+    }
+    .trace-line { stroke-dasharray: 300; animation: graphDraw 3s ease-out forwards; }
+    .metric-pulse { animation: pulse 2s ease-in-out infinite; }
+  </style>
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0D10"/>
+      <stop offset="100%" stop-color="#0E1117"/>
+    </linearGradient>
+    <linearGradient id="greenFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C8FF5D" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#C8FF5D" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="coralFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF6B6B" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="numGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)"/>
+
+  <!-- Title bar -->
+  <text x="400" y="22" text-anchor="middle" font-family="'Courier New', monospace" font-size="10" fill="#8B929E" letter-spacing="5">TELEMETRY</text>
+  <line x1="300" y1="30" x2="500" y2="30" stroke="#C8FF5D" stroke-width="0.4" opacity="0.3"/>
+
+  <!-- ==================== PANEL 1: Problems Solved ==================== -->
+  <g transform="translate(30, 45)">
+    <!-- Panel border -->
+    <rect x="0" y="0" width="230" height="130" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- Label -->
+    <text x="15" y="22" font-family="'Courier New', monospace" font-size="8" fill="#8B929E" letter-spacing="1">PROBLEMS SOLVED</text>
+
+    <!-- Big number -->
+    <text x="15" y="62" font-family="'Courier New', monospace" font-size="36" font-weight="bold" fill="#C8FF5D" filter="url(#numGlow)">1,000+</text>
+
+    <!-- Subtitle -->
+    <text x="15" y="78" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">LeetCode + Codeforces</text>
+
+    <!-- Small ascending line graph -->
+    <g transform="translate(15, 85)">
+      <!-- Grid lines -->
+      <line x1="0" y1="35" x2="200" y2="35" stroke="#8B929E" stroke-width="0.2" opacity="0.3"/>
+      <line x1="0" y1="25" x2="200" y2="25" stroke="#8B929E" stroke-width="0.2" opacity="0.2"/>
+      <line x1="0" y1="15" x2="200" y2="15" stroke="#8B929E" stroke-width="0.2" opacity="0.2"/>
+
+      <!-- Area fill under graph -->
+      <polygon points="0,35 0,32 25,30 50,28 75,25 100,22 125,18 150,14 175,10 200,5 200,35" fill="url(#greenFade)" opacity="0.4"/>
+
+      <!-- Graph line -->
+      <polyline class="trace-line" points="0,32 25,30 50,28 75,25 100,22 125,18 150,14 175,10 200,5" fill="none" stroke="#C8FF5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- End dot -->
+      <circle cx="200" cy="5" r="2.5" fill="#C8FF5D" class="metric-pulse"/>
+    </g>
+
+    <!-- Status indicator -->
+    <circle cx="215" cy="18" r="2" fill="#C8FF5D" class="metric-pulse"/>
+  </g>
+
+  <!-- ==================== PANEL 2: LeetCode Rating ==================== -->
+  <g transform="translate(285, 45)">
+    <!-- Panel border -->
+    <rect x="0" y="0" width="230" height="130" rx="3" fill="#0B0D10" stroke="#C8FF5D" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- Label -->
+    <text x="15" y="22" font-family="'Courier New', monospace" font-size="8" fill="#8B929E" letter-spacing="1">LEETCODE CONTEST</text>
+
+    <!-- Big number -->
+    <text x="15" y="62" font-family="'Courier New', monospace" font-size="36" font-weight="bold" fill="#C8FF5D" filter="url(#numGlow)">1868</text>
+
+    <!-- Subtitle -->
+    <text x="15" y="78" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Contest Rating</text>
+
+    <!-- Signal trace line -->
+    <g transform="translate(15, 85)">
+      <!-- Grid lines -->
+      <line x1="0" y1="35" x2="200" y2="35" stroke="#8B929E" stroke-width="0.2" opacity="0.3"/>
+      <line x1="0" y1="25" x2="200" y2="25" stroke="#8B929E" stroke-width="0.2" opacity="0.2"/>
+      <line x1="0" y1="15" x2="200" y2="15" stroke="#8B929E" stroke-width="0.2" opacity="0.2"/>
+
+      <!-- Area fill -->
+      <polygon points="0,35 0,30 20,28 40,24 55,26 70,20 90,22 110,15 130,18 145,12 160,14 175,8 190,10 200,6 200,35" fill="url(#greenFade)" opacity="0.3"/>
+
+      <!-- Signal trace -->
+      <polyline class="trace-line" points="0,30 20,28 40,24 55,26 70,20 90,22 110,15 130,18 145,12 160,14 175,8 190,10 200,6" fill="none" stroke="#C8FF5D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- End dot -->
+      <circle cx="200" cy="6" r="2.5" fill="#C8FF5D" class="metric-pulse"/>
+    </g>
+
+    <!-- Status indicator -->
+    <circle cx="215" cy="18" r="2" fill="#C8FF5D" class="metric-pulse"/>
+  </g>
+
+  <!-- ==================== PANEL 3: Codeforces Rating ==================== -->
+  <g transform="translate(540, 45)">
+    <!-- Panel border -->
+    <rect x="0" y="0" width="230" height="130" rx="3" fill="#0B0D10" stroke="#FF6B6B" stroke-width="0.6" opacity="0.5"/>
+
+    <!-- Label -->
+    <text x="15" y="22" font-family="'Courier New', monospace" font-size="8" fill="#8B929E" letter-spacing="1">CODEFORCES MAX</text>
+
+    <!-- Big number -->
+    <text x="15" y="62" font-family="'Courier New', monospace" font-size="36" font-weight="bold" fill="#FF6B6B" filter="url(#numGlow)">1313</text>
+
+    <!-- Subtitle -->
+    <text x="15" y="78" font-family="'Courier New', monospace" font-size="8" fill="#8B929E">Max Rating</text>
+
+    <!-- Bar indicator -->
+    <g transform="translate(15, 90)">
+      <!-- Background bar -->
+      <rect x="0" y="0" width="200" height="8" rx="2" fill="#1a1d24"/>
+
+      <!-- Rating segments -->
+      <rect x="0" y="0" width="30" height="8" rx="2" fill="#8B929E" opacity="0.3"/>
+      <rect x="0" y="0" width="30" height="8" rx="2" fill="#8B929E" opacity="0.15"/>
+      <!-- Filled portion (1313/2000 ≈ 65.65%) -->
+      <rect x="0" y="0" width="131" height="8" rx="2" fill="#FF6B6B" opacity="0.7">
+        <animate attributeName="width" from="0" to="131" dur="2s" fill="freeze"/>
+      </rect>
+
+      <!-- Tick marks -->
+      <line x1="50" y1="10" x2="50" y2="14" stroke="#8B929E" stroke-width="0.4" opacity="0.4"/>
+      <line x1="100" y1="10" x2="100" y2="14" stroke="#8B929E" stroke-width="0.4" opacity="0.4"/>
+      <line x1="150" y1="10" x2="150" y2="14" stroke="#8B929E" stroke-width="0.4" opacity="0.4"/>
+      <line x1="200" y1="10" x2="200" y2="14" stroke="#8B929E" stroke-width="0.4" opacity="0.4"/>
+
+      <!-- Scale labels -->
+      <text x="0" y="22" font-family="'Courier New', monospace" font-size="6" fill="#8B929E" opacity="0.5">0</text>
+      <text x="47" y="22" font-family="'Courier New', monospace" font-size="6" fill="#8B929E" opacity="0.5">500</text>
+      <text x="93" y="22" font-family="'Courier New', monospace" font-size="6" fill="#8B929E" opacity="0.5">1000</text>
+      <text x="143" y="22" font-family="'Courier New', monospace" font-size="6" fill="#8B929E" opacity="0.5">1500</text>
+      <text x="193" y="22" font-family="'Courier New', monospace" font-size="6" fill="#8B929E" opacity="0.5">2000</text>
+
+      <!-- Current rating marker -->
+      <line x1="131" y1="-3" x2="131" y2="11" stroke="#FF6B6B" stroke-width="1" opacity="0.8"/>
+      <circle cx="131" cy="-3" r="2" fill="#FF6B6B" class="metric-pulse"/>
+    </g>
+
+    <!-- Status indicator -->
+    <circle cx="215" cy="18" r="2" fill="#FF6B6B" class="metric-pulse"/>
+  </g>
+
+  <!-- Bottom border accent -->
+  <rect x="200" y="198" width="400" height="1.5" rx="1" fill="#C8FF5D" opacity="0.15"/>
+
+  <!-- Border -->
+  <rect x="0" y="0" width="800" height="200" fill="none" stroke="#C8FF5D" stroke-width="0.5" opacity="0.1"/>
+
+  <!-- Corner markers -->
+  <g stroke="#C8FF5D" stroke-width="0.8" opacity="0.2">
+    <polyline points="4,12 4,4 12,4" fill="none"/>
+    <polyline points="788,4 796,4 796,12" fill="none"/>
+    <polyline points="4,188 4,196 12,196" fill="none"/>
+    <polyline points="788,196 796,196 796,188" fill="none"/>
+  </g>
+</svg>
